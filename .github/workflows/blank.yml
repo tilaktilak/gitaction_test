@@ -13,7 +13,6 @@ jobs:
       run: echo Hello, world!
     - name: Run a multi-line script
       run: |
-        brew uninstall --force postgis &&
         curl -O http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-2.4.dmg &&
         hdiutil attach GDAL_Complete-2.4.dmg &&
         cd '/Volumes/GDAL Complete 2.4/' &&
