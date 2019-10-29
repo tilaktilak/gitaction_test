@@ -13,5 +13,9 @@ jobs:
       run: echo Hello, world!
     - name: Run a multi-line script
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        brew uninstall --force postgis &&
+        curl -O http://www.kyngchaos.com/files/software/frameworks/GDAL_Complete-2.4.dmg &&
+        hdiutil attach GDAL_Complete-2.4.dmg &&
+        cd '/Volumes/GDAL Complete 2.4/' &&
+        sudo installer -pkg 'Install GDAL Complete 2.4.pkg' -target "/";
+
